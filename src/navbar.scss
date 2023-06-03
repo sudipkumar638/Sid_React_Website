@@ -1,0 +1,131 @@
+@import "./mediaqueries.scss";
+
+.navContainer {
+
+    height: 70px;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+
+
+
+    @include large {
+        justify-content: center;
+    }
+
+    .navbar {
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: rgb(0, 0, 0);
+        width: 70vw;
+        height: 70px;
+        position: relative;
+
+        .toggleButton {
+            position: absolute;
+            left: 10px;
+
+            @include medium {
+                display: none;
+            }
+        }
+
+        @include extrasmall {
+            width: 100%;
+            padding: 0px 20px;
+            justify-content: center;
+
+        }
+
+        @include medium {
+            justify-content: space-between;
+        }
+
+        @include large {
+            width: 70vw
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+
+            img {
+                object-fit: cover;
+            }
+
+
+            p {
+                font-size: 1.8rem;
+
+
+            }
+
+
+        }
+
+        .menusContainer {
+
+
+
+            .menus {
+                color: rgb(182, 182, 182);
+
+                @include extrasmall {
+                    display: none;
+
+                }
+
+                @include medium {
+                    display: block;
+                }
+
+
+                ul {
+                    list-style: none;
+                    display: flex;
+                    gap: 3rem;
+                    align-items: center;
+
+
+
+
+
+                    :hover {
+                        color: rgb(132, 152, 250);
+                    }
+
+                    li {
+
+
+                        cursor: pointer;
+
+
+                        :hover {
+                            color: rgb(165, 189, 225);
+                        }
+
+                        button {
+                            height: 40px;
+                            width: 80px;
+                            background-color: #2b3ba5;
+                            border: none;
+                            outline: none;
+                            color: white;
+                            cursor: pointer;
+                            font-size: 15px;
+                            font-weight: bold;
+                            border-radius: 5px;
+
+
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}

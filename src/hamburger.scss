@@ -1,0 +1,26 @@
+@import "./mediaqueries.scss";
+
+.hamburgurContainer {
+
+
+
+
+    /* This timing applies on the way IN */
+
+
+    @include medium {
+        display: none;
+    }
+
+    background-color: #a2bbff;
+    color: rgb(15, 14, 14);
+
+    div {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+        padding-top: 20px;
+    }
+
+}
